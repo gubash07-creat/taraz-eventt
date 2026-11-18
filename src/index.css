@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-canvas: #FFF8F8;
+  --color-bg-soft: #FBF1F3;
+  --color-surface-card: #FEFEFF;
+  --color-surface-category: #FFEDE9;
+  --color-accent-crimson: #BE0022;
+  --color-accent-crimson-hover: #9E001C;
+  --color-ink-primary: #2C2021;
+  --color-ink-muted: #6E595B;
+  --font-display: "Lora", Georgia, serif;
+  --font-sans: "Golos Text", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFF8F8;
+    color: #2C2021;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FFF8F8;
+    color: #2C2021;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(190, 0, 34, 0.14);
+    color: #2C2021;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Soft signature rosy ambient shadow matching reference app */
+.taraz-card-shadow {
+  box-shadow:
+    0 24px 60px -15px rgba(190, 0, 34, 0.10),
+    0 8px 24px -8px rgba(44, 32, 33, 0.06);
+}
+
+.taraz-phone-shadow {
+  box-shadow:
+    0 40px 90px -20px rgba(44, 32, 33, 0.22),
+    0 18px 40px -12px rgba(190, 0, 34, 0.14);
+}
+
+.taraz-text-city-mask {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.taraz-spatial-glow {
+  background: radial-gradient(
+    ellipse 62% 52% at 50% 42%,
+    rgba(190, 0, 34, 0.11) 0%,
+    rgba(255, 237, 233, 0.72) 45%,
+    rgba(255, 248, 248, 0) 80%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

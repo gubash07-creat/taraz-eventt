@@ -1,0 +1,6 @@
+{
+  "name": "TARAZ EVENTS — Тараз живёт",
+  "description": "Интерактивный промосайт мобильного приложения поиска культурных мероприятий, концертов, театра и фестивалей в городе Тараз, Казахстан.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
